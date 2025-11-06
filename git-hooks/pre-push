@@ -76,4 +76,3 @@ while read local_ref local_sha remote_ref remote_sha; do
 done
 
 echo "✅ All checks passed successfully."
-
