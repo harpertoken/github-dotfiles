@@ -4,7 +4,7 @@ This repository contains global Git hooks for maintaining consistent commit stan
 
 ## Features
 
-- **Pre-commit checks**: Runs pre-commit hooks if available.
+- **Pre-commit checks**: Runs pre-commit hooks if available (includes Python linting with black/flake8/pylint/mypy, C++ formatting with clang-format, and general checks).
 - **YAML linting**: Runs yamllint on YAML files if available.
 - **Commit message validation**: Ensures messages follow conventional commit format (lowercase, ≤40 chars, proper type).
 - **Author identity verification**: Checks that commits are authored by "Niladri Das" with email "bniladridas@users.noreply.github.com".
@@ -38,9 +38,13 @@ To set up these hooks on a new machine:
    git config --global user.email "bniladridas@users.noreply.github.com"
    ```
 
-5. (Optional) Install recommended tools for enhanced checks:
+5. (Optional) Install and set up pre-commit for enhanced checks:
 
-   - **pre-commit**: `pip install pre-commit`
+   ```bash
+   pip install pre-commit
+   pre-commit install  # In each project repo
+   ```
+
    - **yamllint**: `pip install yamllint` or `brew install yamllint`
 
 ## Usage
