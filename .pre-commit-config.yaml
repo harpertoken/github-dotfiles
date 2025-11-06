@@ -26,6 +26,12 @@ repos:
   rev: v1.3.5
   hooks:
   - id: clang-tidy
+- repo: https://github.com/doublify/pre-commit-rust
+  rev: v1.0
+  hooks:
+  - id: fmt
+  - id: clippy
+  - id: check
 - repo: https://github.com/pre-commit/mirrors-mypy
   rev: v1.0.0
   hooks:
