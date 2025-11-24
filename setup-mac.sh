@@ -45,6 +45,9 @@ brew install ruby
 echo "Installing Rust..."
 brew install rust
 
+echo "Installing Go..."
+brew install go
+
 echo "Installing LLVM..."
 brew install llvm
 
