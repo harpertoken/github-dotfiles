@@ -31,15 +31,7 @@ jobs:
       with:
         python-version: '3.12'
     - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y shellcheck clang clang-tidy
-        curl -sSfL https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 -o /usr/local/bin/hadolint
-        chmod +x /usr/local/bin/hadolint
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-        source "$HOME/.cargo/env"
-        pip install yamllint
-        curl -sSfL https://github.com/rhysd/actionlint/releases/latest/download/actionlint_linux_amd64.tar.gz | tar -xzf - && mv actionlint_*/actionlint /usr/local/bin/
+      uses: ./.github/actions/install-deps
     - name: Install pre-commit
       run: pip install pre-commit
     - name: Run pre-commit

@@ -1,0 +1,28 @@
+name: 'Install Dependencies'
+description: 'Install dependencies for linting and checks'
+runs:
+  using: 'composite'
+  steps:
+    - name: Update apt
+      run: sudo apt-get update
+      shell: bash
+    - name: Install system deps
+      run: sudo apt-get install -y shellcheck clang clang-tidy
+      shell: bash
+    - name: Install hadolint
+      run: |
+        curl -sSfL https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 -o /usr/local/bin/hadolint
+        chmod +x /usr/local/bin/hadolint
+      shell: bash
+    - name: Install Rust
+      run: |
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+        source "$HOME/.cargo/env"
+      shell: bash
+    - name: Install yamllint
+      run: pip install yamllint
+      shell: bash
+    - name: Install actionlint
+      run: |
+        curl -sSfL https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz | tar -xzf - && mv actionlint_1.7.7_linux_amd64/actionlint /usr/local/bin/
+      shell: bash
