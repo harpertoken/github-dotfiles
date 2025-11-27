@@ -74,7 +74,7 @@ The setup script automatically configures Git to use the hooks globally and make
 
 ## Features
 
-- **Pre-commit checks**: Runs pre-commit hooks on push (includes Python linting with black/flake8/mypy/bandit/safety, C++ formatting/linting with clang-format and clang-tidy, Rust formatting/linting/compilation with rustfmt/clippy, Bash linting with shellcheck, Dockerfile linting with hadolint, and general checks).
+- **Pre-commit checks**: Runs pre-commit hooks on push (includes Python linting with black/flake8/mypy/bandit/safety, C++ formatting/linting with clang-format and clang-tidy, Rust formatting/linting/compilation with rustfmt/clippy, Bash linting with shellcheck, Dockerfile linting with hadolint, YAML linting with yamllint, GitHub Actions linting with actionlint, and general checks).
 - **YAML linting**: Runs check-yaml from pre-commit.
 - **Commit message validation**: Commit-msg hook ensures messages start with conventional type and are lowercase ≤60 chars. Pre-push hook enforces stricter format with scope, ≤40 chars.
 - **Author identity verification**: Checks that commits are authored by "Niladri Das" with email "bniladridas@users.noreply.github.com".
