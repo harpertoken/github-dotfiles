@@ -26,5 +26,6 @@ runs:
       run: pip install yamllint
       shell: bash
     - name: Install actionlint
-      run: curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash | bash
+      run: |
+        curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash | bash
       shell: bash
