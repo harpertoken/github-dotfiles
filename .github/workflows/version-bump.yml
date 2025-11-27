@@ -45,6 +45,7 @@ jobs:
     - name: Determine bump type
       id: bump
       run: |
+        # shellcheck disable=SC2086
         if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
           echo "bump_type=${{ inputs.bump_type }}" >> $GITHUB_OUTPUT
         else
