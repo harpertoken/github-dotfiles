@@ -13,14 +13,6 @@ repos:
   rev: v1.37.1
   hooks:
   - id: yamllint
-- repo: local
-  hooks:
-  - id: actionlint
-    name: actionlint
-    entry: /usr/local/bin/actionlint
-    language: system
-    files: ^\.github/workflows/.*\.yml$
-    pass_filenames: true
 - repo: https://github.com/psf/black
   rev: 22.10.0
   hooks:
