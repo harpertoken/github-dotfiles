@@ -128,4 +128,9 @@ else
   echo "Invalid choice, keeping default []."
 fi
 
-echo "Setup complete! Please restart your terminal or run 'source ~/.zprofile' to apply changes."
+echo "Activating dotfiles CLI..."
+cd ~/github-dotfiles
+dart pub global activate --source path .
+echo 'export PATH="$PATH:$HOME/.pub-cache/bin"' >> ~/.zshrc
+
+echo "Setup complete! Please restart your terminal or run 'source ~/.zshrc' to apply changes."
