@@ -17,7 +17,7 @@ repos:
   hooks:
   - id: actionlint
     name: actionlint
-    entry: actionlint
+    entry: /usr/local/bin/actionlint
     language: system
     files: ^\.github/workflows/.*\.yml$
     pass_filenames: true
