@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# SPDX-License-Identifier: MIT
+
 # Mac Setup Script
 # This script sets up a new Mac with Zsh, Homebrew, and opencode.
 
