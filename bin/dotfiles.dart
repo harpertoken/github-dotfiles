@@ -99,6 +99,13 @@ void runSetup() {
     exit(1);
   }
 
+  // Check for sudo access
+  final sudoCheck = Process.runSync('sudo', ['-n', 'true']);
+  if (sudoCheck.exitCode != 0) {
+    print('Setup requires administrator privileges. Please run as admin or ensure sudo access.');
+    exit(1);
+  }
+
   final result = Process.runSync('/bin/bash', ['setup-mac.sh']);
   if (result.exitCode != 0) {
     print('Setup failed: ${result.stderr}');
