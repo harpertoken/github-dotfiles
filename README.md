@@ -12,6 +12,17 @@ git clone https://github.com/bniladridas/github-dotfiles.git ~/github-dotfiles
 
 ## Usage
 
+### Updating and Restoring Dotfiles
+
+To update the repository and restore the latest dotfiles to your home directory:
+
+```bash
+cd ~/github-dotfiles
+./restore/update_and_restore.sh
+```
+
+This script pulls the latest changes and copies `.gitconfig`, `.pre-commit-config.yaml`, and `.yamllint` to `~/`.
+
 ### Initial Mac Setup
 
 For a new Mac, run the setup script to install Zsh, Homebrew, Python, Node.js, Ruby, Rust, Go, Flutter, LLVM, GitHub CLI, GitLab CLI, actionlint, yamllint, Docker CLI, QEMU, opencode, and configure Git hooks globally. It also offers to log in to Docker Hub as 'harpertoken':
