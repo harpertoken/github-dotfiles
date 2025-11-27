@@ -73,6 +73,9 @@ brew install actionlint
 echo "Installing yamllint..."
 brew install yamllint
 
+echo "Installing Flutter..."
+brew install flutter
+
 echo "Installing Docker CLI..."
 brew install docker
 
