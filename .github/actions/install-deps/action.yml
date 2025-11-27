@@ -12,7 +12,8 @@ runs:
       shell: bash
     - name: Install hadolint
       run: |
-        curl -sSfL https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 \
+        curl -sSfL \
+          https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 \
           -o /usr/local/bin/hadolint
         chmod +x /usr/local/bin/hadolint
       shell: bash
@@ -26,6 +27,8 @@ runs:
       shell: bash
     - name: Install actionlint
       run: |
-        curl -sSfL https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz \
-          | tar -xzf - && mv actionlint_1.7.7_linux_amd64/actionlint /usr/local/bin/
+        curl -sSfL \
+          https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz \
+          | tar -xzf - \
+          && mv actionlint_1.7.7_linux_amd64/actionlint /usr/local/bin/
       shell: bash
