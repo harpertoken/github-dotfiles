@@ -40,14 +40,20 @@ The setup script automatically configures Git to use the hooks globally and make
     git config --global core.hooksPath ~/github-dotfiles/git-hooks
     ```
 
-3. Set your Git author identity:
+3. Verify the hooks setup:
+
+    ```bash
+    git config --global core.hooksPath
+    ```
+
+4. Set your Git author identity:
 
     ```bash
     git config --global user.name "Niladri Das"
     git config --global user.email "bniladridas@users.noreply.github.com"
     ```
 
-4. The setup script automatically configures useful Git aliases from `.gitconfig` and lets you choose the bracket type for commit scopes.
+5. The setup script automatically configures useful Git aliases from `.gitconfig` and lets you choose the bracket type for commit scopes.
 
    Available aliases:
    - `git track <branch>`: Set upstream to origin/<branch>

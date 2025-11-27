@@ -108,6 +108,9 @@ echo "Setting up Git hooks..."
 git config --global core.hooksPath ~/github-dotfiles/git-hooks
 chmod +x ~/github-dotfiles/git-hooks/*
 
+echo "Verifying Git hooks setup..."
+git config --global core.hooksPath
+
 echo "Configuring commit message scope brackets..."
 read -r -p "Choose bracket type for commit scopes (1 for [], 2 for ()): " bracket_choice
 if [ "$bracket_choice" = "1" ]; then
