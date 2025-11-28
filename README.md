@@ -17,12 +17,20 @@ git clone https://github.com/bniladridas/github-dotfiles.git ~/github-dotfiles
 Install Dart SDK, then use the CLI tool for managing dotfiles:
 
 ```bash
+# Activate the CLI globally
 dart pub global activate --source path .
+
+# Add to PATH (add this to your ~/.zshrc or ~/.bashrc for permanent access)
+export PATH="$PATH:$HOME/.pub-cache/bin"
+
+# Now you can use the commands:
 dotfiles update    # Update repository
 dotfiles restore   # Restore dotfiles
 dotfiles setup     # Run Mac setup (macOS only)
 dotfiles version   # Show version
 ```
+
+**Note**: The `export PATH` command temporarily adds Dart's global executables to your PATH. Add it to your shell config file (`.zshrc`, `.bashrc`, etc.) to make it permanent.
 
 ### Updating and Restoring Dotfiles
 
