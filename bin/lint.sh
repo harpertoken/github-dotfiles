@@ -18,9 +18,6 @@ find . -name "*.sh" -type f -exec shellcheck {} +
 echo "Running cargo fmt check..."
 cargo fmt --manifest-path ollama/Cargo.toml --check
 
-echo "Running cargo check..."
-cargo check --manifest-path ollama/Cargo.toml
-
 echo "Running cargo clippy..."
 cargo clippy --manifest-path ollama/Cargo.toml -- -D warnings -D missing_docs
 
