@@ -1,6 +1,6 @@
 # GitHub Dotfiles
 
-This repository provides a comprehensive toolkit for developers, including global Git hooks for consistent commit standards and author identity, automated Mac setup scripts with robust error handling and logging for essential development tools (Python, Node.js, Rust, Go, Flutter, Ollama, Gemini CLI, etc.), security scanning bots (CodeQL and Trivy) for vulnerability detection, a Dart-based CLI with help and testing, a Rust-based Ollama model manager, and automated version bump system. It ensures secure, standardized, and efficient development workflows across projects.
+This repository provides a comprehensive toolkit for developers, including global Git hooks for consistent commit standards and author identity, automated Mac setup scripts with robust error handling and logging for essential development tools (Python, Node.js, Rust, Go, Flutter, Ollama, Gemini CLI, KiloCode CLI, etc.), security scanning bots (CodeQL and Trivy) for vulnerability detection, a Dart-based CLI with help and testing, a Rust-based Ollama model manager, and automated version bump system. It ensures secure, standardized, and efficient development workflows across projects.
 
 ## Installation
 
@@ -127,6 +127,15 @@ gt repo sync                             # Sync all branches in repo
 ```
 
 For PR reviews, visit https://app.graphite.com. For advanced usage, see [Graphite docs](https://graphite.dev/docs).
+
+### KiloCode CLI
+
+This repository uses KiloCode CLI for code review, ensuring consistent style and quality in pull requests.
+
+```bash
+kilocode review <pr-url>  # Review a pull request
+kilocode style check      # Check code style
+```
 
 ### Updating and Restoring Dotfiles
 
